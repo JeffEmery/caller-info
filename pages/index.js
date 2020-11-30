@@ -1,65 +1,71 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/index.module.css'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        // <div className="flex flex-col items-center">
+        //     <div className="w-full max-w-6xl">
+        //         <Head>
+        //             <title>Caller Information</title>
+        //             <link rel="icon" href="/favicon.ico" />
+        //         </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        //         <div className="p-4 flex justify-center bg-gray-200 dark:bg-gray-600 ">
+        //             <div className="flex">
+        //                 <h1 className="text-2xl text-gray-900 sm:text-3xl lg:text-5xl dark:text-gray-100">
+        //                     (719) 555-1212
+        //                 </h1>
+        //             </div>
+        //             <div className="flex justify-end">
+        //                 <svg
+        //                     className="w-7 h-7 lg:w-9 lg:h-9 lg:w-9 lg:h-9"
+        //                     viewBox="0 0 24 24"
+        //                     xmlns="http://www.w3.org/2000/svg"
+        //                     fill-rule="evenodd"
+        //                     clip-rule="evenodd"
+        //                 >
+        //                     <path d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z" />
+        //                 </svg>
+        //             </div>
+        //         </div>
+        //         <div>
+        //             <hr className="border-gray-900 dark:border-gray-100" />
+        //         </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        //         {/* <div>
+        //         <h2 className="text-xl dark:text-gray-100">Jeffrey Emery</h2>
+        //     </div> */}
+        //     </div>
+        // </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        // page
+        <div className="flex flex-col flex-nowrap h-screen max-w-screen-xl m-auto">
+            {/* section */}
+            <div className="flex flex-nowrap">
+                <div className="flex flex-grow justify-center items-center bg-gray-200 dark:bg-gray-500">
+                    <h1 className="text-2xl text-gray-900 font-normal sm:text-3xl lg:text-4xl dark:text-gray-100">
+                        (719) 555-1212
+                    </h1>
+                </div>
+                <div className="flex-none min-w-min bg-gray-200 dark:bg-gray-500">
+                    <svg
+                        className="stroke-current text-gray-800 dark:text-gray-100 m-4 w-8 h-8 sm:w-9 sm:h-9 lg:w-9 lg:h-9"
+                        viewBox="-1 -1 26 26"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                    >
+                        <path d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z" />
+                    </svg>
+                </div>
+            </div>
+            <hr className="border-gray-900 dark:border-gray-100" />
+            <div className="flex flex-grow flex-nowrap">
+                <div className="flex-grow bg-gray-200">1</div>
+                <div className="flex-none min-w-min bg-gray-500">
+                    I'm a little tea pot
+                </div>
+            </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    )
 }

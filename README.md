@@ -1,5 +1,71 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Setting up Tailwind
+
+```bash
+npm install --save-dev autoprefixer postcss postcss-flexbugs-fixes postcss-preset-env tailwindcss
+```
+
+## VS Code Extension
+
+Add a CSS/SCSS/Less linter otherwise VS Code will not like the @ directives in the CSS
+
+[stylelint Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+Make the following Workspace settings changes:
+```
+"css.validate": false,
+"less.validate": false,
+"scss.validate": false
+```
+
+Tailwind and postcss configuration
+
+```js
+// tailwind.config.js
+module.exports = {
+    purge: [
+        './components/**/*.{js,ts,jsx,tsx}',
+        './pages/**/*.{js,ts,jsx,tsx}',
+    ],
+    darkMode: 'media', // 'media' or 'class'
+    theme: {
+        extend: {
+            colors: {
+                'accent-1': '#333',
+            },
+        },
+    },
+    variants: {
+        extend: {},
+    },
+    plugins: [],
+}
+```
+
+```js
+// postcss.config.js
+module.exports = {
+    plugins: [
+        'tailwindcss',
+        'autoprefixer',
+        'postcss-flexbugs-fixes',
+        [
+            'postcss-preset-env',
+            {
+                autoprefixer: {
+                    flexbox: 'no-2009',
+                },
+                stage: 3,
+                features: {
+                    'custom-properties': false,
+                },
+            },
+        ],
+    ],
+}
+```
+
 ## Getting Started
 
 First, run the development server:

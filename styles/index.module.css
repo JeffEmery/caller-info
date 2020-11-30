@@ -1,0 +1,10 @@
+.txt-input {
+    @apply px-4 py-2 border border-transparent 
+        focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded;
+}
+
+.txt-input-required {
+    @apply px-4 py-2 border border-transparent 
+        ring-2 ring-red-600 
+        focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded;
+}
