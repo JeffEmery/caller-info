@@ -43,7 +43,7 @@ export default function Home() {
             {/* section */}
             <div className="flex flex-nowrap">
                 <div className="flex flex-grow justify-center items-center bg-gray-200 dark:bg-gray-500">
-                    <h1 className="text-2xl text-gray-900 font-normal sm:text-3xl lg:text-4xl dark:text-gray-100">
+                    <h1 className="pl-16 text-2xl text-gray-900 font-normal sm:text-3xl lg:text-4xl dark:text-gray-100">
                         (719) 555-1212
                     </h1>
                     {/* <input
