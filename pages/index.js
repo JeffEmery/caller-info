@@ -39,7 +39,7 @@ export default function Home() {
         // </div>
 
         // page
-        <div className="flex flex-col flex-nowrap h-screen max-w-screen-lg m-auto">
+        <div className="flex flex-col flex-nowrap h-screen max-w-screen-md m-auto">
             {/* section */}
             <div className="flex flex-nowrap">
                 <div className="flex flex-grow justify-center items-center bg-gray-200 dark:bg-gray-500">
@@ -70,12 +70,12 @@ export default function Home() {
             <div className="flex-grow bg-gray-300">
                 {/* <div className="grid grid-cols-2 gap-4"> */}
                 <div className="">
-                    <div className="m-4 p-4 bg-blue-100 border border-gray-400 shadow-md rounded-md">
-                        <div className="flex justify-between pb-4 text-blue-900 text-xl font-bold">
+                    <div className="m-4 p-4 bg-gray-100 border border-gray-400 shadow-md rounded-md">
+                        <div className="flex justify-between pb-4 text-gray-900 text-2xl font-bold">
                             <div className="">Jeffrey Emery</div>{' '}
                             <div className="">12/22/1975</div>
                         </div>
-                        <hr className="-mx-4 border-blue-900" />
+                        <hr className="-mx-4 border-gray-900" />
                         {/* <div className="flex justify-between"> */}
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                             <div
@@ -95,33 +95,37 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="pt-6 grid grid-cols-2">
-                            <div className="text-lg font-semibold">
-                                12/5/2019
-                            </div>
-                            <div className="text-right">
-                                <div className="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full shadow-md text-sm font-medium border border-green-700 bg-green-100 text-green-800">
-                                    Complete
+                        <div className="mt-4 p-4 bg-gray-200 border border-gray-400 rounded-md shadow-md">
+                            <div className="grid grid-cols-2">
+                                <div className="text-lg font-semibold">
+                                    12/5/2019
+                                </div>
+                                <div className="text-right">
+                                    <div className="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full shadow-md text-sm font-medium border border-green-700 bg-green-100 text-green-800">
+                                        Complete
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2">
-                            <div>
-                                <div className="">
-                                    <p className="uppercase">
-                                        MRI Lumbar Spine WO - 72148
-                                    </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2">
+                                <div>
+                                    <div className="">
+                                        <p className="uppercase">
+                                            MRI Lumbar Spine WO - 72148
+                                        </p>
+                                    </div>
+                                    <div className="">Dr. Thomas Anderson</div>
                                 </div>
-                                <div className="">Dr. Thomas Anderson</div>
-                            </div>
-                            <div className="mt-4 sm:mt-0">
-                                <div className="sm:text-right">
-                                    <p className="">Colorado Springs Imaging</p>
+                                <div className="mt-4 sm:mt-0">
+                                    <div className="sm:text-right">
+                                        <p className="">
+                                            Colorado Springs Imaging
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="m-4 p-4 bg-blue-300 shadow-md rounded-md">
+                    <div className="m-4 p-4 bg-gray-100 shadow-md rounded-md">
                         Detail
                     </div>
                 </div>
