@@ -108,16 +108,16 @@ export default function Home() {
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2">
                                 <div>
-                                    <div className="mt-2 md:mt-2">
+                                    <div className="mt-2">
                                         <p className="uppercase">
                                             MRI Lumbar Spine WO - 72148
                                         </p>
                                     </div>
                                     <div className="">Dr. Thomas Anderson</div>
                                 </div>
-                                <div className="mt-4 sm:mt-0">
-                                    <div className="mt-2 md:mt-2 sm:text-right">
-                                        <p className="">
+                                <div className="mt-2 sm:mt-0">
+                                    <div className="sm:text-right">
+                                        <p className="sm:mt-2">
                                             Colorado Springs Imaging
                                         </p>
                                     </div>
