@@ -39,32 +39,61 @@ export default function Home() {
         // </div>
 
         // page
-        <div className="flex flex-col flex-nowrap h-screen max-w-screen-xl m-auto">
+        <div className="flex flex-col flex-nowrap h-screen max-w-screen-lg m-auto">
             {/* section */}
             <div className="flex flex-nowrap">
                 <div className="flex flex-grow justify-center items-center bg-gray-200 dark:bg-gray-500">
                     <h1 className="text-2xl text-gray-900 font-normal sm:text-3xl lg:text-4xl dark:text-gray-100">
                         (719) 555-1212
                     </h1>
+                    {/* <input
+                        type="text"
+                        className="text-2xl text-gray-50 placeholder-gray-400 border-b-2 border-gray-700 bg-gray-500 w-72 text-center rounded"
+                        maxLength="14"
+                        placeholder="(719) 555-1212"
+                    ></input> */}
                 </div>
                 <div className="flex-none min-w-min bg-gray-200 dark:bg-gray-500">
                     <svg
                         className="stroke-current text-gray-800 dark:text-gray-100 m-4 w-8 h-8 sm:w-9 sm:h-9 lg:w-9 lg:h-9"
                         viewBox="-1 -1 26 26"
                         xmlns="http://www.w3.org/2000/svg"
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                     >
                         <path d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z" />
                     </svg>
                 </div>
             </div>
             <hr className="border-gray-900 dark:border-gray-100" />
-            <div className="flex flex-grow flex-nowrap">
-                <div className="flex-grow bg-gray-200">1</div>
-                <div className="flex-none min-w-min bg-gray-500">
-                    I'm a little tea pot
+            {/* <div>  className="flex flex-grow bg-gray-300 flex-nowrap"> */}
+            <div className="flex-grow bg-gray-300">
+                {/* <div className="grid grid-cols-2 gap-4"> */}
+                <div className="">
+                    <div className="m-4 p-4 bg-blue-100 border border-gray-400 shadow-md rounded-md">
+                        <div className="flex justify-between pb-4 text-blue-900 text-xl font-bold">
+                            <div className="">Jeffrey Emery</div>
+                            <div className="">12/22/1975</div>
+                        </div>
+                        <hr className="-mx-4 border-blue-900" />
+                        <div className="flex justify-between">
+                            <div className={`py-4 ${styles.love}`}>
+                                123 East Endover Road High
+                                <span>West Farmington, NM 86589</span>
+                            </div>
+                            <div className="py-4">
+                                <div className="text-right">(719) 555-1212</div>
+                                <div className="">jeff.emery@yahoo.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="m-4 p-4 bg-blue-300 shadow-md rounded-md">
+                        Detail
+                    </div>
                 </div>
+                {/* <div className="flex-none min-w-min bg-gray-500">
+                    I'm a little tea pot
+                </div> */}
             </div>
         </div>
     )
