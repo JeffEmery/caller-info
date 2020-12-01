@@ -72,18 +72,50 @@ export default function Home() {
                 <div className="">
                     <div className="m-4 p-4 bg-blue-100 border border-gray-400 shadow-md rounded-md">
                         <div className="flex justify-between pb-4 text-blue-900 text-xl font-bold">
-                            <div className="">Jeffrey Emery</div>
+                            <div className="">Jeffrey Emery</div>{' '}
                             <div className="">12/22/1975</div>
                         </div>
                         <hr className="-mx-4 border-blue-900" />
-                        <div className="flex justify-between">
-                            <div className={`py-4 ${styles.love}`}>
-                                123 East Endover Road High
+                        {/* <div className="flex justify-between"> */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                            <div
+                                className={`pt-4 whitespace-nowrap ${styles.love}`}
+                            >
+                                123 East Endover Road
                                 <span>West Farmington, NM 86589</span>
                             </div>
-                            <div className="py-4">
-                                <div className="text-right">(719) 555-1212</div>
-                                <div className="">jeff.emery@yahoo.com</div>
+                            <div className="pt-4">
+                                <div className="sm:text-right">
+                                    <a className="" href="tel:1-719-555-1212">
+                                        (719) 555-1212
+                                    </a>
+                                </div>
+                                <div className="sm:text-right">
+                                    jeff.emery@yahoo.com
+                                </div>
+                            </div>
+                        </div>
+                        <div className="pt-6 grid grid-cols-2">
+                            <div className="text-lg font-semibold">
+                                12/5/2019
+                            </div>
+                            <div className="text-right">
+                                <div class="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full text-sm font-medium border border-green-700 bg-green-100 text-green-800">
+                                    Complete
+                                </div>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                            <div>
+                                <div className="">
+                                    MRI Lumbar Spine WO - 72148
+                                </div>
+                                <div className="">Dr. Thomas Anderson</div>
+                            </div>
+                            <div className="">
+                                <div className="sm:text-right">
+                                    Colorado Springs Imaging
+                                </div>
                             </div>
                         </div>
                     </div>
