@@ -97,7 +97,7 @@ export default function Home() {
                         </div>
                         <div className="mt-4 p-4 bg-gray-200 border border-gray-400 rounded-md shadow-md">
                             <div className="grid grid-cols-2">
-                                <div className="text-lg font-semibold">
+                                <div className="pt-0.5 text-lg font-semibold">
                                     12/5/2019
                                 </div>
                                 <div className="text-right">
@@ -108,7 +108,7 @@ export default function Home() {
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2">
                                 <div>
-                                    <div className="">
+                                    <div className="mt-2 md:mt-2">
                                         <p className="uppercase">
                                             MRI Lumbar Spine WO - 72148
                                         </p>
@@ -116,7 +116,7 @@ export default function Home() {
                                     <div className="">Dr. Thomas Anderson</div>
                                 </div>
                                 <div className="mt-4 sm:mt-0">
-                                    <div className="sm:text-right">
+                                    <div className="mt-2 md:mt-2 sm:text-right">
                                         <p className="">
                                             Colorado Springs Imaging
                                         </p>
