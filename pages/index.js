@@ -32,15 +32,15 @@ export default function Home() {
                             <div className="">Fred McCauliff</div>{' '}
                             <div className="">5/22/1965</div>
                         </div>
-                        <hr className="-mx-4 border-gray-900" />
+                        <hr className="-mx-4 border-gray-400" />
                         <div className="grid grid-cols-1 sm:grid-cols-2">
                             <div
-                                className={`pt-4 whitespace-nowrap ${styles.love}`}
+                                className={`pt-4 ml-2 whitespace-nowrap ${styles.love}`}
                             >
                                 123 East Endover Road
                                 <span>West Farmington, NM 86589</span>
                             </div>
-                            <div className="pt-4">
+                            <div className="pt-4 mx-2">
                                 <div className="sm:text-right">
                                     <a className="" href="tel:1-719-555-1212">
                                         (202) 555-1212
@@ -53,18 +53,18 @@ export default function Home() {
                         </div>
                         <div className="mt-4 p-4 bg-gray-200 border border-gray-400 rounded-md shadow-md">
                             <div className="grid grid-cols-2">
-                                <div className="pt-0.5 text-lg font-semibold">
+                                <div className="pt-0.5 text-xl font-semibold">
                                     12/5/2019
                                 </div>
                                 <div className="text-right">
                                     <div className="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full shadow-md text-sm font-medium border border-green-700 bg-green-100 text-green-800">
-                                        Complete
+                                        Open
                                     </div>
                                 </div>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2">
                                 <div>
-                                    <div className="mt-2">
+                                    <div className="text-base font-semibold mt-2">
                                         <p className="uppercase">
                                             MRI Lumbar Spine WO - 72148
                                         </p>
@@ -73,7 +73,7 @@ export default function Home() {
                                 </div>
                                 <div className="mt-2 sm:mt-0">
                                     <div className="sm:text-right">
-                                        <p className="sm:mt-2">
+                                        <p className="text-gray-700 sm:mt-2">
                                             North Arlington
                                         </p>
                                     </div>
@@ -81,8 +81,96 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="m-4 p-4 bg-gray-100 shadow-md rounded-md">
-                        Detail
+                    <div className="m-4 p-4 bg-gray-100 border border-gray-400 shadow-md rounded-md">
+                        <div className="flex justify-between pb-4 text-gray-900 text-2xl font-bold">
+                            <div className="">Terry Branson</div>{' '}
+                            <div className="">9/5/1982</div>
+                        </div>
+                        <hr className="-mx-4 border-gray-400" />
+                        <div className="grid grid-cols-1 sm:grid-cols-2">
+                            <div
+                                className={`pt-4 ml-2 whitespace-nowrap ${styles.love}`}
+                            >
+                                4532 Old Mason Way
+                                <span>McClean, VA 22541</span>
+                            </div>
+                            <div className="pt-4 mx-2">
+                                <div className="sm:text-right">
+                                    <a className="" href="tel:1-719-555-1212">
+                                        (202) 555-1212
+                                    </a>
+                                </div>
+                                <div className="sm:text-right">
+                                    tbranson1@hotmail.com
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-4 p-4 bg-gray-200 border border-gray-400 rounded-md shadow-md">
+                            <div>
+                                <div className="grid grid-cols-2">
+                                    <div className="pt-0.5 text-xl font-semibold">
+                                        5/18/2020
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full shadow-md text-sm font-medium border border-pink-700 bg-pink-100 text-pink-800">
+                                            Canceled
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2">
+                                    <div>
+                                        <div className="text-base font-semibold mt-2">
+                                            <p className="uppercase">
+                                                CT Abdomen and Pelvis /w- 74177
+                                            </p>
+                                            <p className="uppercase">
+                                                CT Chest /w- 74186
+                                            </p>
+                                        </div>
+                                        <div className="">Dr. Mary Peters</div>
+                                    </div>
+                                    <div className="mt-2 sm:mt-0">
+                                        <div className="sm:text-right">
+                                            <p className="text-gray-700 sm:mt-2">
+                                                Las Colinas
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr className="-mx-4 my-4 border-gray-400" />
+                            <div>
+                                <div className="grid grid-cols-2">
+                                    <div className="pt-0.5 text-xl font-semibold">
+                                        9/5/2020
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="inline-flex items-baseline px-3 pt-1 pb-1.5 rounded-full shadow-md text-sm font-medium border border-purple-700 bg-purple-100 text-purple-800">
+                                            Complete
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2">
+                                    <div>
+                                        <div className="text-base font-semibold mt-2">
+                                            <p className="uppercase">
+                                                MRI Thoracic Spine W/O - 72146
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            Dr. Christopher Mason
+                                        </div>
+                                    </div>
+                                    <div className="mt-2 sm:mt-0">
+                                        <div className="sm:text-right">
+                                            <p className="text-gray-700 sm:mt-2">
+                                                Dallas
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
