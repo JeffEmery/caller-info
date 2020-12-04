@@ -1,7 +1,67 @@
 import Head from 'next/head'
 import styles from '../styles/index.module.css'
 
-export default function Home() {
+export async function getServerSideProps(context) {
+    const creds = Buffer.from(
+        process.env.basic_username + ':' + process.env.basic_password
+    ).toString('base64')
+
+    const auth = await fetch(
+        'https://services-dev.envrad.com/callerinfo/api/token',
+        {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Basic ${creds}`,
+            },
+            body: JSON.stringify({
+                grant_type: 'client_credentials',
+                client_id: process.env.client_id,
+                client_secret: process.env.client_secret,
+                scope: 'callerinfo:read',
+                user: 'api-system',
+            }),
+        }
+    )
+        .then((res) => res.json())
+        .catch((error) => {
+            console.log(error)
+        })
+
+    const data = await fetch(
+        'https://services-dev.envrad.com/callerinfo/api/callerinfo',
+        {
+            method: 'GET',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${auth.access_token}`,
+            },
+            body: JSON.stringify({
+                Dnis: '1-800-555-1212',
+                Ani: '1-719-555-9999',
+                User: 'incontact user name',
+            }),
+        }
+    )
+        .then((res) => res.json())
+        .catch((error) => {
+            console.log(error)
+        })
+
+    console.log(data)
+
+    return {
+        props: { user: 'cups' },
+    }
+
+    // https://services-dev.envrad.com/callerinfo/api/callerinfo
+}
+
+export default function Home(props) {
+    console.log(props)
+
     return (
         // page
         <div className="flex flex-col flex-nowrap h-screen max-w-screen-md m-auto">
@@ -11,6 +71,12 @@ export default function Home() {
                     <h1 className="pl-16 text-2xl text-gray-900 font-normal sm:text-3xl lg:text-4xl dark:text-gray-100">
                         (202) 555-1212
                     </h1>
+                    {/* <input
+                        type="text"
+                        maxLength="14"
+                        placeholder="(303) 555-1212"
+                        className="ml-16 text-4xl text-center text-gray-100 bg-gray-500"
+                    ></input> */}
                 </div>
                 <div className="flex-none min-w-min bg-gray-200 dark:bg-gray-500">
                     <svg
@@ -29,7 +95,7 @@ export default function Home() {
                 <div className="">
                     <div className="m-4 p-4 bg-gray-100 border border-gray-400 shadow-md rounded-md">
                         <div className="flex justify-between pb-4 text-gray-900 text-2xl font-bold">
-                            <div className="">Fred McCauliff</div>{' '}
+                            <div className="">Paul Gregory</div>
                             <div className="">5/22/1965</div>
                         </div>
                         <hr className="-mx-4 border-gray-400" />
@@ -66,15 +132,17 @@ export default function Home() {
                                 <div>
                                     <div className="text-base font-semibold mt-2">
                                         <p className="uppercase">
-                                            MRI Lumbar Spine WO - 72148
+                                            MRI Lumbar Spine WO
                                         </p>
                                     </div>
-                                    <div className="">Dr. Thomas Anderson</div>
+                                    <div className="mt-2">
+                                        Dr. Thomas Anderson
+                                    </div>
                                 </div>
                                 <div className="mt-2 sm:mt-0">
                                     <div className="sm:text-right">
                                         <p className="text-gray-700 sm:mt-2">
-                                            North Arlington
+                                            {/* North Arlington */}
                                         </p>
                                     </div>
                                 </div>
@@ -83,7 +151,7 @@ export default function Home() {
                     </div>
                     <div className="m-4 p-4 bg-gray-100 border border-gray-400 shadow-md rounded-md">
                         <div className="flex justify-between pb-4 text-gray-900 text-2xl font-bold">
-                            <div className="">Terry Branson</div>{' '}
+                            <div className="">Jon Frederick</div>{' '}
                             <div className="">9/5/1982</div>
                         </div>
                         <hr className="-mx-4 border-gray-400" />
@@ -119,20 +187,22 @@ export default function Home() {
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2">
                                     <div>
-                                        <div className="text-base font-semibold mt-2">
+                                        <div className="mt-2 text-base font-semibold">
                                             <p className="uppercase">
-                                                CT Abdomen and Pelvis /w- 74177
+                                                CT Abdomen and Pelvis /w
                                             </p>
                                             <p className="uppercase">
-                                                CT Chest /w- 74186
+                                                CT Chest /w
                                             </p>
                                         </div>
-                                        <div className="">Dr. Mary Peters</div>
+                                        <div className="mt-2">
+                                            Dr. Mary Peters
+                                        </div>
                                     </div>
                                     <div className="mt-2 sm:mt-0">
                                         <div className="sm:text-right">
                                             <p className="text-gray-700 sm:mt-2">
-                                                Las Colinas
+                                                {/* Las Colinas */}
                                             </p>
                                         </div>
                                     </div>
@@ -154,17 +224,17 @@ export default function Home() {
                                     <div>
                                         <div className="text-base font-semibold mt-2">
                                             <p className="uppercase">
-                                                MRI Thoracic Spine W/O - 72146
+                                                MRI Thoracic Spine W/O
                                             </p>
                                         </div>
-                                        <div className="">
+                                        <div className="mt-2">
                                             Dr. Christopher Mason
                                         </div>
                                     </div>
                                     <div className="mt-2 sm:mt-0">
                                         <div className="sm:text-right">
                                             <p className="text-gray-700 sm:mt-2">
-                                                Dallas
+                                                {/* Dallas */}
                                             </p>
                                         </div>
                                     </div>
