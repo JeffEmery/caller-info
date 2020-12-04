@@ -10,7 +10,7 @@ export async function getServerSideProps(context) {
         'https://services-dev.envrad.com/callerinfo/api/token',
         {
             method: 'POST',
-            credentials: 'include',
+            //credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Basic ${creds}`,
@@ -29,20 +29,17 @@ export async function getServerSideProps(context) {
             console.log(error)
         })
 
+    console.log(auth)
+    console.log(auth)
+
     const data = await fetch(
-        'https://services-dev.envrad.com/callerinfo/api/callerinfo',
+        'https://services-dev.envrad.com/callerinfo/api/callerinfo?Dnis=1-800-555-1212&Ani=17195559999&User=incontact%20user%20name',
         {
             method: 'GET',
-            credentials: 'include',
+            //credentials: 'include',
             headers: {
-                'Content-Type': 'application/json',
                 Authorization: `Bearer ${auth.access_token}`,
             },
-            body: JSON.stringify({
-                Dnis: '1-800-555-1212',
-                Ani: '1-719-555-9999',
-                User: 'incontact user name',
-            }),
         }
     )
         .then((res) => res.json())
@@ -50,21 +47,17 @@ export async function getServerSideProps(context) {
             console.log(error)
         })
 
-    console.log(data)
-
     return {
         props: { user: 'cups' },
     }
-
-    // https://services-dev.envrad.com/callerinfo/api/callerinfo
 }
 
 export default function Home(props) {
     console.log(props)
 
     return (
-        // page
-        <div className="flex flex-col flex-nowrap h-screen max-w-screen-md m-auto">
+        // page // removed h-screen to see if it fixes the missing header on mobile
+        <div className="flex flex-col flex-nowrap max-w-screen-md m-auto">
             {/* section */}
             <div className="flex flex-nowrap">
                 <div className="flex flex-grow justify-center items-center bg-gray-200 dark:bg-gray-500">
